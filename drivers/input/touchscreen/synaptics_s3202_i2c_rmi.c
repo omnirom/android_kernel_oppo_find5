@@ -2461,7 +2461,7 @@ firmware_update:
 #endif
 
 #ifdef CONFIG_TOUCHSCREEN_SYNAPTICS_S2W
-	ts->s2w_enabled = true;
+	ts->s2w_enabled = false;
 	ts->s2w_register_threshold = 9;
 	ts->s2w_min_distance = 325;
 	ts->s2w_allow_stroke = true;
@@ -2471,7 +2471,7 @@ firmware_update:
 	print_ts(TS_INFO, KERN_INFO "%s: s2w_enabled=%d  s2w_register_threshold=%d s2w_min_distance=%d s2w_allow_stroke=%d s2w_barrier_y=%d\n", __func__, ts->s2w_enabled, ts->s2w_register_threshold, ts->s2w_min_distance, ts->s2w_allow_stroke, ts->s2w_barrier_y);	
 	
 	ts->dt2w_barrier_y = ts->s2w_barrier_y;
-	ts->dt2w_enabled = true;
+	ts->dt2w_enabled = false;
 	ts->dt2w_duration = 150;
 	ts->dt2w_threshold = 200;
 
