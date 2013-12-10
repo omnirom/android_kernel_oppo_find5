@@ -615,7 +615,8 @@ void ssl3252_add_led_class(void)
 	ldev.brightness_set = ssl3252_set_brightness;
 	ldev.brightness_get = ssl3252_get_brightness;
 	ldev.blink_set = ssl3252_set_blink;
-	ldev.flags = LED_CORE_SUSPENDRESUME;
+	// maxwen: make torch usable on screen off
+	//ldev.flags = LED_CORE_SUSPENDRESUME;
 	ldev.brightness = LED_OFF ;
 	
 	err = led_classdev_register(&ssl3252_client->dev, &ldev);
